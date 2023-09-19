@@ -4,7 +4,10 @@ image = cv2.imread('shape.jpg')
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 thresholdType,threshold = cv2.threshold(gray, 100, 255, cv2.THRESH_BINARY)
 
+# Linea diferente
+
 print(f'Threshold type: {thresholdType}')
+
 # Show image
 cv2.imshow('Original image', image)
 cv2.imshow('Processed image: Gray', gray)
