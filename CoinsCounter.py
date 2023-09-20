@@ -7,10 +7,13 @@ gray_scale = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
 # Apply Gauss blur 
 varGauss = 3
 varKernel = 3
-gauss_method = cv2.GaussianBlur(gray_scale, (varGauss, varKernel), 0)
+gauss_method = cv2.GaussianBlur(gray_scale, (varGauss, varGauss), 0)
 
 # Apply Canny blur
 canny_method = cv2.Canny(gauss_method, 60, 100)
+
+# Apply Kernel 
+kernel = np.ones((varKernel, varKernel), np.uint8)
 
 # Show
 
